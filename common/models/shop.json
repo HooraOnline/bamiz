@@ -1,0 +1,157 @@
+{
+  "name": "Shop",
+  "base": "PersistedModel",
+  "strict": false,
+  "idInjection": false,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "address": {
+      "type": "string"
+    },
+    "verifyState": {
+      "type": "string",
+      "comments": "newShop-userPublish-Accepted-reject-inSavelistمرحله تایید-فرایند  تایید مراحل مختلفی دارد"
+    },
+    "businessMobile": {
+      "type": "string"
+    },
+    "businessPhone": {
+      "type": "string"
+    },
+    "region": {
+      "type": "geopoint"
+    },
+    "isInPerson": {
+      "type": "boolean",
+      "comments": "امکان خرید حضوری"
+    },
+    "haveOnlineSell": {
+      "type": "boolean",
+      "comments": "امکان فروش آنلاین"
+    },
+    "acceptBamizCoin": {
+      "type": "boolean",
+      "comments": "قبول سکه بامیز کوین"
+    },
+    "havePhoneSell": {
+      "type": "boolean",
+      "comments": "امکان فروش تلفنی و تحویل درب منزل با پیک"
+    },
+    "haveProduct": {
+      "type": "boolean"
+    },
+    "haveService": {
+      "type": "boolean"
+    },
+    "haveReturn": {
+      "type": "string",
+      "comments": "قبول مرجوعی"
+    },
+    "isShow": {
+      "type": "boolean",
+      "comments": "برای حذف موقتی از لیست فروشگاهها توسط خود کاربر"
+    },
+    "isActive": {
+      "type": "boolean",
+      "comments": "برای غیر فعالی کردن"
+    },
+    "isImporter": {
+      "type": "boolean",
+      "comments": "وارد کننده"
+    },
+    "isOpen": {
+      "type": "boolean"
+    },
+    "isFactory": {
+      "type": "boolean",
+      "comments": " کارخانه"
+    },
+    "Bonakdar": {
+      "type": "boolean",
+      "comments": " بنکدار"
+    },
+    "isProducer": {
+      "type": "boolean",
+      "comments": "تولید کننده"
+    },
+    "isRetail": {
+      "type": "boolean",
+      "comments": "خرده فروش"
+    },
+    "isWholesale": {
+      "type": "boolean",
+      "comments": "عمده فروش"
+    },
+    "isDistributor": {
+      "type": "boolean",
+      "comments": "توزیع کننده"
+    },
+    "name": {
+      "type": "string"
+    },
+    "registerDate": {
+      "type": "string"
+    },
+    "returnPolicies": {
+      "type": "string",
+      "comments": "سیاستهای مرجوعی"
+    },
+    "seenNumber": {
+      "type": "string",
+      "comments": "تعداد بازدید"
+    },
+    "sellpolicies": {
+      "type": "string",
+      "comments": "  سیاستهای فروش و بازپس گیری  و گارانتی و فروش تلفنی و انلاین و سایر روشها"
+    },
+    "sendOtherCity": {
+      "type": "boolean",
+      "comments": "ارسال ب شهر های دیگر"
+    },
+    "serviceBaseOrProduct": {
+      "type": "string",
+      "comments": "کالایی یا خدماتی"
+    },
+    "shortDescription": {
+      "type": "string"
+    },
+    "aboutUs": {
+      "type": "string"
+    },
+    "vendors": {
+      "type": [
+        "object"
+      ]
+    },
+    "senfList": {
+      "type": [
+        "array"
+      ],
+      "comments": "صنف"
+    },
+    "workingHours": {
+      "type": [
+        "object"
+      ]
+    },
+    "memberId": {
+      "type": "string"
+    },
+    "keywords": {
+      "type": "string",
+      "comments": "for search"
+    }
+  },
+  "validations": [],
+  "relations": {
+    "products": {
+      "type": "hasMany",
+      "model": "Product",
+      "foreignKey": ""
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

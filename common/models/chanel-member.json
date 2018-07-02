@@ -1,0 +1,32 @@
+{
+  "name": "ChanelMember",
+  "base": "PersistedModel",
+  "strict": false,
+  "idInjection": false,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "chanelId": {
+      "type": "string"
+    },
+    "memberId": {
+      "type": "string"
+    }
+  },
+  "validations": [],
+  "relations": {
+    "chanels": {
+      "type": "hasMany",
+      "model": "Chanel",
+      "foreignKey": ""
+    },
+    "people": {
+      "type": "hasMany",
+      "model": "Member",
+      "foreignKey": ""
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

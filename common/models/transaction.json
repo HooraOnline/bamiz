@@ -1,0 +1,64 @@
+{
+  "name": "Transaction",
+  "base": "PersistedModel",
+  "strict": false,
+  "idInjection": false,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "buyerCommission": {
+      "type": "number"
+    },
+    "parentCommission": {
+      "type": "string",
+      "comments": "// همان بن خرید است که به معرف تعلق می گیرد"
+    },
+    "senderCardNumber": {
+      "type": "string",
+      "comments": "برای حالت پرداخت مستقیم پیش بینی شده ولی در حال حاضر هم از شماره بامیز پرداخت کننده پر می شود"
+    },
+    "totalCommission": {
+      "type": "number",
+      "comments": "برای نیازهای آینده یعنی همان پرداخت مستقیم"
+    },
+    "resiverWaletNumber": {
+      "type": "string",
+      "comments": "این حساب بستانکار می شود"
+    },
+    "senderSource": {
+      "type": "string",
+      "comments": "walet/bankcard   // حالت پرداخت مستقیم از طریق کارت برای نیازهای اینده پیش بینی شده است"
+    },
+    "senderWaletNumber": {
+      "type": "string",
+      "comments": "این حساب بدهکار میشود"
+    },
+    "action": {
+      "type": "string",
+      "index": false,
+      "comments": "//  شارژ با کارت شتاب/شارژ با بن خرید/شارژ از کیف فروشگاهی/شارژ از طریق حواله /خرید/انتقال وجه بین اعضا از کیف اصلی/انتقال وجه بین اعضا از کیف فروشندگی/برداشت از کیف اصلی /برداشت از کیف فروشگاهی"
+    },
+    "userCredit": {
+      "type": "string",
+      "comments": "ترنزکشن از نوع شارژ با کارت اعتبار را افزایش میدهد و ترنزکشن از نوع شارژ با بن خرید کاهش میدهد"
+    },
+    "amount": {
+      "type": "number"
+    },
+    "bamizCommission": {
+      "type": "number"
+    },
+    "description": {
+      "type": "string"
+    },
+    "isSeen": {
+      "type": "boolean",
+      "comments": "مشاهده شده توسط کاربر"
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}

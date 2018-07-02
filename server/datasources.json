@@ -1,0 +1,32 @@
+{
+  "db": {
+    "name": "db",
+    "connector": "memory"
+  },
+  "bamizDS": {
+    "host": "localhost",
+    "port": 27017,
+    "url": "",
+    "database": "bamizDB",
+    "password": "",
+    "name": "bamizDS",
+    "user": "root",
+    "connector": "mongodb"
+  },
+  "bamizDS2": {
+    "host": "ds123981.mlab.com",
+    "port": 23981,
+    "url": "",
+    "database": "bamizdb",
+    "password": "hoora434343",
+    "name": "bamizDS",
+    "user": "root",
+    "connector": "mongodb"
+  },
+  "storage": {
+    "name": "storage",
+    "connector": "loopback-component-storage",
+    "provider": "filesystem",
+    "root": "./server/storage"
+  }
+}

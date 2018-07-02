@@ -1,0 +1,22 @@
+{
+  "name": "Attachment",
+  "base": "PersistedModel",
+  "strict": false,
+  "idInjection": false,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "badgeCounter": {
+      "type": "string"
+    },
+    "memberId": {
+      "type": "string",
+      "comments": "لاین جدول برای الحاقات اضافی استفاه می شود مثلا برای شمارش ورودی های کارتابل و هر چیز اضافی که نمی خواهیم در جول اصلی باشد"
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}

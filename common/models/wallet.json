@@ -1,0 +1,42 @@
+{
+  "name": "Wallet",
+  "base": "PersistedModel",
+  "strict": false,
+  "idInjection": false,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "memberId": {
+      "type": "string"
+    },
+    "type": {
+      "type": "string",
+      "comments": "publicWallet/storeWallet/MarketerWallet/ stocks/سهم بامیز برای سهامداران"
+    },
+    "transferMoneyCommission": {
+      "type": "string",
+      "comments": "کمیسیون انتقال"
+    },
+    "number": {
+      "type": "string"
+    },
+    "withdrawMoneyCommission": {
+      "type": "string",
+      "comments": "کمیسیون برداشت"
+    },
+    "balance": {
+      "type": "number"
+    }
+  },
+  "validations": [],
+  "relations": {
+    "walletTransactions": {
+      "type": "hasMany",
+      "model": "WalletTransaction",
+      "foreignKey": ""
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

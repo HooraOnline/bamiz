@@ -1,0 +1,133 @@
+{
+  "_meta": {
+    "sources": [
+      "loopback/common/models",
+      "loopback/server/models",
+      "../common/models",
+      "./models"
+    ],
+    "mixins": [
+      "loopback/common/mixins",
+      "loopback/server/mixins",
+      "../common/mixins",
+      "./mixins"
+    ]
+  },
+  "User": {
+    "dataSource": "bamizDS"
+  },
+  "AccessToken": {
+    "dataSource": "bamizDS",
+    "public": false
+  },
+  "ACL": {
+    "dataSource": "bamizDS",
+    "public": false
+  },
+  "RoleMapping": {
+    "dataSource": "bamizDS",
+    "public": false,
+    "options": {
+      "strictObjectIDCoercion": true
+    }
+  },
+  "Role": {
+    "dataSource": "bamizDS",
+    "public": false
+  },
+  "Message": {
+    "dataSource": "bamizDS",
+    "$promise": {},
+    "$resolved": true
+  },
+  "BankCard": {
+    "dataSource": "bamizDS",
+    "public": true,
+    "$promise": {},
+    "$resolved": true
+  },
+  "Chanel": {
+    "dataSource": "bamizDS",
+    "public": true,
+    "$promise": {},
+    "$resolved": true
+  },
+  "ChanelMember": {
+    "dataSource": "bamizDS",
+    "public": true,
+    "$promise": {},
+    "$resolved": true
+  },
+  "Member": {
+    "dataSource": "bamizDS",
+    "public": true,
+    "$promise": {},
+    "$resolved": true
+  },
+  "Shop": {
+    "dataSource": "bamizDS",
+    "public": true
+  },
+  "container": {
+    "dataSource": "storage",
+    "public": true
+  },
+  "Transaction": {
+    "dataSource": "bamizDS",
+    "public": true,
+    "$promise": {},
+    "$resolved": true
+  },
+  "Wallet": {
+    "dataSource": "bamizDS",
+    "public": true,
+    "$promise": {},
+    "$resolved": true
+  },
+  "IndexGenerator": {
+    "dataSource": "bamizDS",
+    "public": true,
+    "$promise": {},
+    "$resolved": true
+  },
+  "inveted": {
+    "dataSource": "bamizDS",
+    "public": true,
+    "$promise": {},
+    "$resolved": true
+  },
+  "Bug": {
+    "dataSource": "bamizDS",
+    "public": true,
+    "$promise": {},
+    "$resolved": true
+  },
+  "tError": {
+    "dataSource": "bamizDS",
+    "public": true,
+    "$promise": {},
+    "$resolved": true
+  },
+  "Attachment": {
+    "dataSource": "bamizDS",
+    "public": true,
+    "$promise": {},
+    "$resolved": true
+  },
+  "payToSellerWorkflow": {
+    "dataSource": "bamizDS",
+    "public": true
+  },
+  "Smoothing": {
+    "dataSource": "bamizDS",
+    "public": true,
+    "$promise": {},
+    "$resolved": true
+  },
+  "Product": {
+    "dataSource": "bamizDS",
+    "public": true,
+    "$promise": {},
+    "$resolved": true
+  }
+}

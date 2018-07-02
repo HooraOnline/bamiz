@@ -1,0 +1,24 @@
+{
+  "name": "payToSellerWorkflow",
+  "base": "PersistedModel",
+  "strict": false,
+  "idInjection": false,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "isSeen": {
+      "type": "boolean",
+      "comments": "مشاهده شده توسط کاربر"
+    },
+    "action": {
+      "type": "string",
+      "index": false,
+      "comments": "//  شارژ با کارت شتاب/شارژ با بن خرید/شارژ از کیف فروشگاهی/شارژ از طریق حواله /خرید/انتقال وجه بین اعضا از کیف اصلی/انتقال وجه بین اعضا از کیف فروشندگی/برداشت از کیف اصلی /برداشت از کیف فروشگاهی"
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}

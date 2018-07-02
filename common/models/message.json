@@ -1,0 +1,58 @@
+{
+  "name": "Message",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "sellerId": {
+      "type": "string"
+    },
+    "chanelId": {
+      "type": "string"
+    },
+    "resiverId": {
+      "type": "string"
+    },
+    "text": {
+      "type": "string"
+    },
+    "file": {
+      "type": "string"
+    },
+    "isRead": {
+      "type": "boolean"
+    },
+    "seen": {
+      "type": "number"
+    },
+    "date": {
+      "type": "date"
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {
+    "greet": {
+      "isStatic": true,
+      "accepts": [
+        {
+          "arg": "msg",
+          "type": "string",
+          "http": {
+            "source": "query"
+          }
+        }
+      ],
+      "returns": {
+        "arg": "greeting",
+        "type": "string"
+      },
+      "http": {
+        "verb": "get"
+      }
+    }
+  }
+}

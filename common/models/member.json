@@ -1,0 +1,282 @@
+{
+  "name": "Member",
+  "base": "User",
+  "strict": false,
+  "idInjection": false,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "address": {
+      "type": "string"
+    },
+    "birthDay": {
+      "type": "string"
+    },
+    "id2": {
+      "type": "string"
+    },
+    "creditBalance": {
+      "type": "number",
+      "comments": "مانده اعتبار خرید"
+    },
+    "email": {
+      "type": "string"
+    },
+    "firstName": {
+      "type": "string",
+      "required": false
+    },
+    "userCoordinate": {
+      "type": "geopoint"
+    },
+    "registerLocation": {
+      "type": "geopoint"
+    },
+    "isActive": {
+      "type": "boolean"
+    },
+    "isOnline": {
+      "type": "boolean"
+    },
+    "isReport": {
+      "type": "string",
+      "comments": "System logs out users who do not follow the rules"
+    },
+    "lastName": {
+      "type": "string",
+      "required": false
+    },
+    "marid": {
+      "type": "boolean"
+    },
+    "mobile": {
+      "type": "string"
+    },
+    "nationalCode": {
+      "type": "string",
+      "comments": "کد ملی"
+    },
+    "password": {
+      "type": "string"
+    },
+    "pictureAddresses": {
+      "type": [
+        "string"
+      ]
+    },
+    "reagentId": {
+      "type": "string",
+      "required": false,
+      "comments": "آیدی کسی که بامیز را به این شخص معرفی کرده"
+    },
+    "invitationCode": {
+      "type": "string",
+      "required": false,
+      "comments": "کد شخص جهت دعوت از دیگران"
+    },
+    "registerDate": {
+      "type": "date"
+    },
+    "sex": {
+      "type": "string"
+    },
+    "userId": {
+      "type": "string",
+      "comments": "از جدول(مدل) ادمین"
+    },
+    "username": {
+      "type": "string",
+      "required": false
+    },
+    "verifyState": {
+      "type": "number",
+      "comments": "4 state of during the registration process(EnterPhon-InitialRegistration-SendedPassword-Login)"
+    },
+    "language": {
+      "type": "string",
+      "comments": "زبان محاوره کاربر"
+    }
+  },
+  "validations": [],
+  "relations": {
+    "members": {
+      "type": "hasMany",
+      "model": "Member",
+      "foreignKey": "reagentId"
+    },
+    "bankCards": {
+      "type": "hasMany",
+      "model": "BankCard",
+      "foreignKey": ""
+    },
+    "chanels": {
+      "type": "hasMany",
+      "model": "Chanel",
+      "foreignKey": ""
+    },
+    "messages": {
+      "type": "hasMany",
+      "model": "Message",
+      "foreignKey": "resiverId"
+    },
+    "messages2": {
+      "type": "hasMany",
+      "model": "Message",
+      "foreignKey": "senderId"
+    },
+    "Smoothing": {
+      "type": "hasMany",
+      "model": "Smoothing",
+      "foreignKey": "memberId"
+    },
+    "transaction": {
+      "type": "hasMany",
+      "model": "Transaction",
+      "foreignKey": "reagentId"
+    },
+    "transaction2": {
+      "type": "hasMany",
+      "model": "Transaction",
+      "foreignKey": "resiverId"
+    },
+    "transaction3": {
+      "type": "hasMany",
+      "model": "Transaction",
+      "foreignKey": "senderId"
+    },
+    "transactionSellerId": {
+      "type": "hasMany",
+      "model": "Transaction",
+      "foreignKey": "sellerId"
+    },
+    "transactionBuyerId": {
+      "type": "hasMany",
+      "model": "Transaction",
+      "foreignKey": "buyerId"
+    },
+    "payToSellerWorkflowSellerId": {
+      "type": "hasMany",
+      "model": "payToSellerWorkflow",
+      "foreignKey": "sellerId"
+    },
+    "payToSellerWorkflowBuyerId": {
+      "type": "hasMany",
+      "model": "payToSellerWorkflow",
+      "foreignKey": "buyerId"
+    },
+    "shops": {
+      "type": "hasMany",
+      "model": "Shop",
+      "foreignKey": ""
+    },
+    "wallets": {
+      "type": "hasMany",
+      "model": "Wallet",
+      "foreignKey": ""
+    },
+    "inveteds": {
+      "type": "hasMany",
+      "model": "inveted",
+      "foreignKey": "reagentId"
+    }
+  },
+  "acls": [
+    {
+      "principalType": "ROLE",
+      "principalId": "$everyone",
+      "permission": "DENY"
+    },
+    {
+      "principalType": "ROLE",
+      "principalId": "$authenticated",
+      "permission": "ALLOW"
+    },
+    {
+      "accessType": "READ",
+      "principalType": "ROLE",
+      "principalId": "$authenticated",
+      "permission": "ALLOW"
+    },
+    {
+      "accessType": "WRITE",
+      "principalType": "ROLE",
+      "principalId": "$everyone",
+      "permission": "ALLOW"
+    },
+    {
+      "principalType": "ROLE",
+      "principalId": "$everyone",
+      "permission": "ALLOW",
+      "property": "create"
+    },
+    {
+      "principalType": "ROLE",
+      "principalId": "$owner",
+      "permission": "ALLOW",
+      "property": "deleteById"
+    },
+    {
+      "principalType": "ROLE",
+      "principalId": "$everyone",
+      "permission": "ALLOW",
+      "property": "login"
+    },
+    {
+      "principalType": "ROLE",
+      "principalId": "$everyone",
+      "permission": "ALLOW",
+      "property": "logout"
+    },
+    {
+      "principalType": "ROLE",
+      "principalId": "$owner",
+      "permission": "ALLOW",
+      "property": "findById"
+    },
+    {
+      "principalType": "ROLE",
+      "principalId": "$owner",
+      "permission": "ALLOW",
+      "property": "updateAttributes"
+    },
+    {
+      "principalType": "ROLE",
+      "principalId": "$everyone",
+      "permission": "ALLOW",
+      "property": "confirm"
+    },
+    {
+      "accessType": "EXECUTE",
+      "principalType": "ROLE",
+      "principalId": "$everyone",
+      "permission": "ALLOW",
+      "property": "resetPassword"
+    },
+    {
+      "principalType": "ROLE",
+      "principalId": "$everyone",
+      "permission": "ALLOW",
+      "property": "isBamizMember"
+    },
+    {
+      "principalType": "ROLE",
+      "principalId": "$everyone",
+      "permission": "ALLOW",
+      "property": "registerMember"
+    },
+    {
+      "principalType": "ROLE",
+      "principalId": "$everyone",
+      "permission": "ALLOW",
+      "property": "getReagent"
+    },
+    {
+      "principalType": "ROLE",
+      "principalId": "$everyone",
+      "permission": "ALLOW",
+      "property": "loginMember"
+    }
+  ],
+  "methods": {}
+}

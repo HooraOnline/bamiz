@@ -1,0 +1,30 @@
+{
+  "name": "Smoothing",
+  "base": "PersistedModel",
+  "strict": false,
+  "idInjection": false,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "isPay": {
+      "type": "boolean"
+    },
+    "isSeen": {
+      "type": "boolean"
+    },
+    "memberId": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    },
+    "amount": {
+      "type": "number"
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}

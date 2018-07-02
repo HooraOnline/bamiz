@@ -1,0 +1,38 @@
+{
+  "name": "BankCard",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "year": {
+      "type": "number",
+      "required": true
+    },
+    "isDefault": {
+      "type": "boolean",
+      "default": false
+    },
+    "bankName": {
+      "type": "string",
+      "required": true
+    },
+    "cardNumber": {
+      "type": "string",
+      "required": true
+    },
+    "ccv2": {
+      "type": "string",
+      "required": true
+    },
+    "month": {
+      "type": "number",
+      "required": true
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}

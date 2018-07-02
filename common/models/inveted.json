@@ -1,0 +1,27 @@
+{
+  "name": "inveted",
+  "base": "PersistedModel",
+  "strict": false,
+  "idInjection": false,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "InvitedMobole": {
+      "type": "string"
+    },
+    "reagentMobile": {
+      "type": "string"
+    },
+    "reagentName": {
+      "type": "string"
+    },
+    "reagentId": {
+      "type": "string"
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}
