@@ -3,7 +3,7 @@
     "name": "db",
     "connector": "memory"
   },
-  "bamizDS": {
+  "bamizDS2": {
     "host": "localhost",
     "port": 27017,
     "url": "",
@@ -13,7 +13,7 @@
     "user": "root",
     "connector": "mongodb"
   },
-  "bamizDS2": {
+  "bamizDS": {
     "host": "ds123981.mlab.com",
     "port": 23981,
     "url": "",
