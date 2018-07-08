@@ -11,7 +11,7 @@
     "password": "Hoora434343*",
     "name": "bamizDS",
     "user": "root",
-    "connector": "mongodb"
+    "connector": "mongodb" 
   },
 
   "storage": {
