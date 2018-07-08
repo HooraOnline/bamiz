@@ -9,7 +9,7 @@
     "url": "",
     "database": "bamizDB",
     "password": "",
-    "name": "bamizDS",
+    "name": "bamizDS2",
     "user": "root",
     "connector": "mongodb"
   },
@@ -18,11 +18,12 @@
     "port": 23981,
     "url": "",
     "database": "bamizdb",
-    "password": "hoora434343",
+    "password": "Hoora434343*",
     "name": "bamizDS",
     "user": "root",
     "connector": "mongodb"
   },
+
   "storage": {
     "name": "storage",
     "connector": "loopback-component-storage",
